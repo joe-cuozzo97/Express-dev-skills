@@ -1,13 +1,18 @@
 const skills = [
-  { id: 12, skill: "running", expert: true },
-  { id: 13, skill: "juggling", expert: false },
-  { id: 14, skill: "coding", expert: false },
+  { id: 12, skill: "running"},
+  { id: 13, skill: "juggling",},
+  { id: 14, skill: "coding",}
 ];
 
 module.exports = {
-  getAll,
+  getSkills,
 };
 
-function getAll() {
+function getSkills() {
   return skills;
+}
+
+getOne:(id) => {
+  id = parseInt(id)
+  return skills.find(skill => skill.id === id)
 }
