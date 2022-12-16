@@ -8,8 +8,20 @@
 </head>
 <body>
     
-    <h3><%= skill.skill %></h3>
-   
+    <h1>Skills</h1>
+    <ul>
+      <% skills.forEach(function(skill) { %>
+      <li>
+        <form action="/skills/<%= skill.id %>?_method=DELETE" class="delete-form" method="POST">
+       <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
+       <button type="submit">X</button>
+        </form>
+      </li>
+      <% }); %>
+    </ul>
+    <a href="/">Home Page</a>
+    <a href="/skills/new">Add New Skill</a>
+
 
 </body>
 </html>
